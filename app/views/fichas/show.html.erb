@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Programa:</strong>
+  <%= @ficha.programa %>
+</p>
+
+<p>
+  <strong>Ficha:</strong>
+  <%= @ficha.ficha %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_path(@ficha) %> |
+<%= link_to 'Back', fichas_path %>

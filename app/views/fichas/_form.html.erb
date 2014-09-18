@@ -1,0 +1,26 @@
+<%= simple_form_for [@centro,@ficha], :html => { :class => 'form­horizontal' } do |f| %>
+  <% if @ficha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha.errors.count, "error") %> prohibited this ficha from being saved:</h2>
+
+      <ul>
+      <% @ficha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :programa %><br>
+    <%= f.text_field :programa %>
+  </div>
+  <div class="field">
+    <%= f.label :ficha %><br>
+    <%= f.text_field :ficha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), centro_fichas_path(@centro), :class => 'btn' %> 
+  </div>
+<% end %>

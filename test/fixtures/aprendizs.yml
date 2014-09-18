@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apellido: MyString
+  doc: MyString
+  centro_id: 
+  ficha_id: 
+
+two:
+  nombre: MyString
+  apellido: MyString
+  doc: MyString
+  centro_id: 
+  ficha_id: 

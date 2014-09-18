@@ -1,0 +1,36 @@
+<%= form_for(@aprendiz) do |f| %>
+  <% if @aprendiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aprendiz.errors.count, "error") %> prohibited this aprendiz from being saved:</h2>
+
+      <ul>
+      <% @aprendiz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :doc %><br>
+    <%= f.text_field :doc %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>  
+  <div class="field"> 
+    Centro <br> <%= f.collection_select :centro_id, Centro.all, :id, :nombre, class: "form­-control", prompt: "Seleccione Centro" %> 
+</div> 
+  <div class="field">
+    <%= f.label :ficha_id %><br>
+    <%= f.text_field :ficha_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

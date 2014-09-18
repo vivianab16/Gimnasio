@@ -1,0 +1,33 @@
+<h1>Aprendiz</h1>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Doc</th>
+      <th>Centro</th>
+      <th>Ficha</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aprendizs.each do |aprendiz| %>
+      <tr>
+        <td><%= aprendiz.nombre %></td>
+        <td><%= aprendiz.apellido %></td>
+        <td><%= aprendiz.doc %></td>
+        <td><%= aprendiz.centro.nombre rescue nil %></td>
+        <td><%= aprendiz.ficha %></td>
+        <td><%= link_to 'Ver', aprendiz %></td>
+        <td><%= link_to 'Editar', edit_aprendiz_path(aprendiz) %></td>
+        <td><%= link_to 'Eliminar', aprendiz, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Aprendiz', new_aprendiz_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @otro.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @otro.apellido %>
+</p>
+
+<p>
+  <strong>Doc:</strong>
+  <%= @otro.doc %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @otro.cargo.nombre rescue nil %>
+</p>
+
+<%= link_to 'Edit', edit_otro_path(@otro) %> |
+<%= link_to 'Back', otros_path %>

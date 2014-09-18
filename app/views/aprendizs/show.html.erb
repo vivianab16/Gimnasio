@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @aprendiz.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @aprendiz.apellido %>
+</p>
+
+<p>
+  <strong>Doc:</strong>
+  <%= @aprendiz.doc %>
+</p>
+
+<p>
+  <strong>Centro:</strong>
+  <%= @aprendiz.centro.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Ficha:</strong>
+  <%= @aprendiz.ficha %>
+</p>
+
+<%= link_to 'Editar', edit_aprendiz_path(@aprendiz) %> |
+<%= link_to 'Atras', aprendizs_path %>

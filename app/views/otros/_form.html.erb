@@ -1,0 +1,32 @@
+<%= form_for(@otro) do |f| %>
+  <% if @otro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@otro.errors.count, "error") %> prohibited this otro from being saved:</h2>
+
+      <ul>
+      <% @otro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :doc %><br>
+    <%= f.text_field :doc %>
+  </div>
+  <div class="field"> 
+    Cargo <br> <%= f.collection_select :cargo_id, Cargo.all, :id, :nombre, class: "form­-control", prompt: "Seleccione Cargo" %> 
+</div> 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

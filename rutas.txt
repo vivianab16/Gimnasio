@@ -1,0 +1,57 @@
+           Prefix Verb   URI Pattern                                   Controller#Action
+            otros GET    /otros(.:format)                              otros#index
+                  POST   /otros(.:format)                              otros#create
+         new_otro GET    /otros/new(.:format)                          otros#new
+        edit_otro GET    /otros/:id/edit(.:format)                     otros#edit
+             otro GET    /otros/:id(.:format)                          otros#show
+                  PATCH  /otros/:id(.:format)                          otros#update
+                  PUT    /otros/:id(.:format)                          otros#update
+                  DELETE /otros/:id(.:format)                          otros#destroy
+        aprendizs GET    /aprendizs(.:format)                          aprendizs#index
+                  POST   /aprendizs(.:format)                          aprendizs#create
+     new_aprendiz GET    /aprendizs/new(.:format)                      aprendizs#new
+    edit_aprendiz GET    /aprendizs/:id/edit(.:format)                 aprendizs#edit
+         aprendiz GET    /aprendizs/:id(.:format)                      aprendizs#show
+                  PATCH  /aprendizs/:id(.:format)                      aprendizs#update
+                  PUT    /aprendizs/:id(.:format)                      aprendizs#update
+                  DELETE /aprendizs/:id(.:format)                      aprendizs#destroy
+          centros GET    /centros(.:format)                            centros#index
+                  POST   /centros(.:format)                            centros#create
+       new_centro GET    /centros/new(.:format)                        centros#new
+      edit_centro GET    /centros/:id/edit(.:format)                   centros#edit
+           centro GET    /centros/:id(.:format)                        centros#show
+                  PATCH  /centros/:id(.:format)                        centros#update
+                  PUT    /centros/:id(.:format)                        centros#update
+                  DELETE /centros/:id(.:format)                        centros#destroy
+           fichas GET    /fichas(.:format)                             fichas#index
+                  POST   /fichas(.:format)                             fichas#create
+        new_ficha GET    /fichas/new(.:format)                         fichas#new
+       edit_ficha GET    /fichas/:id/edit(.:format)                    fichas#edit
+            ficha GET    /fichas/:id(.:format)                         fichas#show
+                  PATCH  /fichas/:id(.:format)                         fichas#update
+                  PUT    /fichas/:id(.:format)                         fichas#update
+                  DELETE /fichas/:id(.:format)                         fichas#destroy
+           cargos GET    /cargos(.:format)                             cargos#index
+                  POST   /cargos(.:format)                             cargos#create
+        new_cargo GET    /cargos/new(.:format)                         cargos#new
+       edit_cargo GET    /cargos/:id/edit(.:format)                    cargos#edit
+            cargo GET    /cargos/:id(.:format)                         cargos#show
+                  PATCH  /cargos/:id(.:format)                         cargos#update
+                  PUT    /cargos/:id(.:format)                         cargos#update
+                  DELETE /cargos/:id(.:format)                         cargos#destroy
+    centro_fichas GET    /centros/:centro_id/fichas(.:format)          fichas#index
+                  POST   /centros/:centro_id/fichas(.:format)          fichas#create
+ new_centro_ficha GET    /centros/:centro_id/fichas/new(.:format)      fichas#new
+edit_centro_ficha GET    /centros/:centro_id/fichas/:id/edit(.:format) fichas#edit
+     centro_ficha GET    /centros/:centro_id/fichas/:id(.:format)      fichas#show
+                  PATCH  /centros/:centro_id/fichas/:id(.:format)      fichas#update
+                  PUT    /centros/:centro_id/fichas/:id(.:format)      fichas#update
+                  DELETE /centros/:centro_id/fichas/:id(.:format)      fichas#destroy
+                  GET    /centros(.:format)                            centros#index
+                  POST   /centros(.:format)                            centros#create
+                  GET    /centros/new(.:format)                        centros#new
+                  GET    /centros/:id/edit(.:format)                   centros#edit
+                  GET    /centros/:id(.:format)                        centros#show
+                  PATCH  /centros/:id(.:format)                        centros#update
+                  PUT    /centros/:id(.:format)                        centros#update
+                  DELETE /centros/:id(.:format)                        centros#destroy
