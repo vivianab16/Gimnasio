@@ -28,7 +28,7 @@ class OtrosController < ApplicationController
 
     respond_to do |format|
       if @otro.save
-        format.html { redirect_to @otro, notice: 'Otro was successfully created.' }
+        format.html { redirect_to @otro, notice: 'visitante creado satisfactoriamente.' }
         format.json { render :show, status: :created, location: @otro }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class OtrosController < ApplicationController
   def update
     respond_to do |format|
       if @otro.update(otro_params)
-        format.html { redirect_to @otro, notice: 'Otro was successfully updated.' }
+        format.html { redirect_to @otro, notice: 'visitante actualizado satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @otro }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class OtrosController < ApplicationController
   def destroy
     @otro.destroy
     respond_to do |format|
-      format.html { redirect_to otros_url, notice: 'Otro was successfully destroyed.' }
+      format.html { redirect_to otros_url, notice: 'visitante eliminado satisfactoriamente.' }
       format.json { head :no_content }
     end
   end

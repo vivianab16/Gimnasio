@@ -28,7 +28,7 @@ class FichasController < ApplicationController
     @ficha.centro_id = @centro.id 
     respond_to do |format|
       if @ficha.save
-        format.html { redirect_to centro_fichas_path(@centro), notice: 'Ficha was successfully created.' }
+        format.html { redirect_to centro_fichas_path(@centro), notice: 'Ficha creada satisfactoriamente.' }
         format.json { render :show, status: :created, location: @ficha }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class FichasController < ApplicationController
   def update
     respond_to do |format|
       if @ficha.update(ficha_params)
-        format.html { redirect_to centro_fichas_path(@centro), notice: 'Ficha was successfully updated.' }
+        format.html { redirect_to centro_fichas_path(@centro), notice: 'Ficha actualizada satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @ficha }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class FichasController < ApplicationController
   def destroy
     @ficha.destroy
     respond_to do |format|
-      format.html { redirect_to centro_fichas_url(@centro), notice: 'Ficha was successfully destroyed.' }
+      format.html { redirect_to centro_fichas_url(@centro), notice: 'Ficha eliminada satisfactoriamente.' }
       format.json { head :no_content }
     end
   end

@@ -4,7 +4,13 @@ class AprendizsController < ApplicationController
   # GET /aprendizs
   # GET /aprendizs.json
   def index
-    @aprendizs = Aprendiz.all
+
+    @aprendizs = Aprendiz.order(:nombre)
+    respond_to do |format|
+      format.html
+      format.csv { render text: @aprendizs.to_csv }
+      format.xls { send_data @aprendizs.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /aprendizs/1
@@ -28,7 +34,7 @@ class AprendizsController < ApplicationController
 
     respond_to do |format|
       if @aprendiz.save
-        format.html { redirect_to @aprendiz, notice: 'Aprendiz was successfully created.' }
+        format.html { redirect_to @aprendiz, notice: 'Aprendiz creado satisfactoriamente' }
         format.json { render :show, status: :created, location: @aprendiz }
       else
         format.html { render :new }
@@ -42,7 +48,7 @@ class AprendizsController < ApplicationController
   def update
     respond_to do |format|
       if @aprendiz.update(aprendiz_params)
-        format.html { redirect_to @aprendiz, notice: 'Aprendiz was successfully updated.' }
+        format.html { redirect_to @aprendiz, notice: 'Aprendiz actualizado satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @aprendiz }
       else
         format.html { render :edit }
@@ -56,7 +62,7 @@ class AprendizsController < ApplicationController
   def destroy
     @aprendiz.destroy
     respond_to do |format|
-      format.html { redirect_to aprendizs_url, notice: 'Aprendiz was successfully destroyed.' }
+      format.html { redirect_to aprendizs_url, notice: 'Aprendiz eliminado satisfactoriamente.' }
       format.json { head :no_content }
     end
   end

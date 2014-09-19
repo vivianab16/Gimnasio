@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140917225336) do
   create_table "fichas", force: true do |t|
     t.string   "programa"
     t.string   "ficha"
+    t.integer  "centro_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

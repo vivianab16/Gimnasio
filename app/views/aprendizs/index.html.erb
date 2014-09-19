@@ -31,3 +31,9 @@
 <br>
 
 <%= link_to 'Nuevo Aprendiz', new_aprendiz_path %>
+
+<p>
+  Descargas:
+  <%= link_to "CSV", aprendizs_path(format: "csv") %> |
+  <%= link_to "Excel", aprendizs_path(format: "xls") %>
+</p>
