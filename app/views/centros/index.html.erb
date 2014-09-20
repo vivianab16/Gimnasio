@@ -14,9 +14,10 @@
       <tr>
         <td><%= link_to 'programas', centro_fichas_path(centro) %></td> 
         <td><%= centro.nombre %></td>
-        <td><%= link_to 'Ver', centro %></td>
-        <td><%= link_to 'Editar', edit_centro_path(centro) %></td>
-        <td><%= link_to 'Eliminar', centro, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <td><%= link_to 'Ver', centro, :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Editar', edit_centro_path(centro), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Eliminar', centro, method: :delete, data: { confirm: 'Esta seguro?' },
+        :class => 'btn btn-mini btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +25,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Centro', new_centro_path %>
+<%= link_to 'Nuevo Centro', new_centro_path, :class => 'btn btn-primary' %>

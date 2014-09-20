@@ -1,4 +1,4 @@
-<h1>Listing fichas</h1>
+<h1>fichas</h1>
 
 <table class="table table-striped table-hover ">
   <thead>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= ficha.programa %></td>
         <td><%= ficha.ficha %></td>
-        <td><%= link_to 'Ver', centro_ficha_path(@centro, ficha) %></td>
-        <td><%= link_to 'Editar', edit_centro_ficha_path(@centro, ficha) %></td>
-        <td><%= link_to 'Eliminar', centro_ficha_path(@centro, ficha), method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        <td><%= link_to 'Ver', centro_ficha_path(@centro, ficha), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Editar', edit_centro_ficha_path(@centro, ficha), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Eliminar', centro_ficha_path(@centro, ficha), method: :delete, data: { confirm: 'Esta seguro?' }, :class => 'btn btn-mini btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,6 +26,4 @@
 
 <%= link_to t('.new', :default => t("helpers.links.Nuevo")), 
  
-new_centro_ficha_path(@centro), 
- 
-:class => 'btn btn­primary' %>
+new_centro_ficha_path(@centro), :class => 'btn btn­primary' %>
