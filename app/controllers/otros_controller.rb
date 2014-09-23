@@ -69,6 +69,6 @@ class OtrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def otro_params
-      params.require(:otro).permit(:nombre, :apellido, :doc, :cargos_id)
+      params.require(:otro).permit(:nombre, :apellido, :doc, :cargo_id)
     end
 end

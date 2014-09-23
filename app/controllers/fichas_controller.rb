@@ -70,6 +70,6 @@ class FichasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ficha_params
-      params.require(:ficha).permit(:programa, :ficha, :centro_id)
+      params.require(:ficha).permit(:programa, :ficha_id, :centro_id)
     end
 end

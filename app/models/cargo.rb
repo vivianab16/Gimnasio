@@ -1,3 +1,3 @@
 class Cargo < ActiveRecord::Base
-	belongs_to :otro
+	has_many :otros
 end

@@ -1,3 +1,3 @@
 class Otro < ActiveRecord::Base
-  has_many :cargos
+  belongs_to :cargo
 end

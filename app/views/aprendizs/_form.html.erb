@@ -31,8 +31,7 @@
   </div> 
   
   <div class="field">
-    <%= f.label :ficha_id %><br>
-    <%= f.text_field :ficha_id %>
+     Ficha <br> <%= f.collection_select :ficha_id, Ficha.all, :id, :ficha, class: "form­-control", prompt: "Seleccione Ficha" %> 
   </div>
   
   <div class="actions">
