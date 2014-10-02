@@ -3,3 +3,4 @@ rails g scaffold ficha programa:string ficha:string
 rails g scaffold centro nombre:string programa:references
 rails g scaffold aprendiz nombre:string apellido:string doc:string centro:references ficha:references
 rails g scaffold otro nombre:string apellido:string doc:string cargo:references
+rails g scaffold user email:string contraseña:string

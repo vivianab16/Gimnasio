@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+
+  resources :user_sessions
+  resources :users
+
   resources :otros
-
   resources :aprendizs
-
   resources :centros
-
   resources :fichas
-
   resources :cargos
 
   resources :centros do 
@@ -16,6 +16,14 @@ Rails.application.routes.draw do
   resources :otros do 
     resources :cargos
   end
+
+  get 'user_session/new'
+  get 'user_sessions/create'
+  get 'user_session/destroy'
+
+  get 'login' => 'user_sessions#new', :as => :login
+  get 'logout' => 'user_sessions#destroy', :as => :logout
+ # get 'allFichas/', to: 'fichas#allFichas', as: 'fichas'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

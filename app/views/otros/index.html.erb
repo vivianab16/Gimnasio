@@ -18,8 +18,8 @@
         <td><%= otro.apellido %></td>
         <td><%= otro.doc %></td>
         <td><%= otro.cargo.nombre rescue nil %></td>
-        <td><%= link_to 'Ver', otro, :class => 'btn btn-mini' %></td>
-        <td><%= link_to 'Editar', edit_otro_path(otro), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Ver', otro, :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Editar', edit_otro_path(otro), :class => 'btn btn-mini btn-success' %></td>
         <td><%= link_to 'Eliminar', otro, method: :delete, data: { confirm: 'Esta seguro?' }, 
         :class => 'btn btn-mini btn-danger' %></td>
       </tr>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'Nuevo visitante', new_otro_path, :class => 'btn btn-mini' %>
+<%= link_to 'Nuevo visitante', new_otro_path, :class => 'btn btn-mini btn-default' %>

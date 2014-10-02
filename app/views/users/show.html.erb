@@ -1,0 +1,15 @@
+<h1>Detalles de Usuario</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Contraseña:</strong>
+  <%= @user.crypted_password %>
+</p>
+
+<%= link_to 'Editar', edit_user_path(@user), class: "btn btn-default" %> |
+<%= link_to 'Atras', users_path, class: "btn btn-default" %>

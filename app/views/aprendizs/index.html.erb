@@ -19,9 +19,9 @@
         <td><%= aprendiz.apellido %></td>
         <td><%= aprendiz.doc %></td>
         <td><%= aprendiz.centro.nombre rescue nil %></td>
-        <td><%= aprendiz.ficha.ficha %></td>
-        <td><%= link_to 'Ver', aprendiz, :class => 'btn btn-mini' %></td>
-        <td><%= link_to 'Editar', edit_aprendiz_path(aprendiz), :class => 'btn btn-mini' %></td>
+        <td><%= aprendiz.ficha.ficha rescue nil %></td>
+        <td><%= link_to 'Ver', aprendiz, :class => 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Editar', edit_aprendiz_path(aprendiz), :class => 'btn btn-mini btn-success' %></td>
         <td><%= link_to 'Eliminar', aprendiz, method: :delete, data: { confirm: 'Esta seguro?' },
         :class => 'btn btn-mini btn-danger' %></td>
       </tr>
@@ -31,11 +31,11 @@
 
 <br>
 
-<%= link_to 'Nuevo Aprendiz', new_aprendiz_path, :class => 'btn btn-primary' %>
+<%= link_to 'Nuevo Aprendiz', new_aprendiz_path, :class => 'btn btn-default' %>
 
 <p>
 <br>
   Descargas:
-  <%= link_to "CSV", aprendizs_path(format: "csv"), :class => 'btn btn-Info' %> |
-  <%= link_to "Excel", aprendizs_path(format: "xls"), :class => 'btn btn-Info' %>
+  <%= link_to "CSV", aprendizs_path(format: "csv"), :class => 'btn btn-info' %> |
+  <%= link_to "Excel", aprendizs_path(format: "xls"), :class => 'btn btn-info' %>
 </p>
