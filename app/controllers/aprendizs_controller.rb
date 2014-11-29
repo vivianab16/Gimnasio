@@ -1,6 +1,6 @@
 class AprendizsController < ApplicationController
   before_action :set_aprendiz, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :require_login
   # GET /aprendizs
   # GET /aprendizs.json
   def index

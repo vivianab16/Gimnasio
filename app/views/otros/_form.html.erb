@@ -27,6 +27,6 @@
     Cargo <br> <%= f.collection_select :cargo_id, Cargo.all, :id, :nombre, class: "form­-control", prompt: "Seleccione Cargo" %> 
 </div> 
   <div class="actions">
-    <%= f.submit "Guardar" %>
+    <%= f.submit "Guardar", :class => 'btn btn-default' %>
   </div>
 <% end %>

@@ -1,7 +1,11 @@
 <h1>Nuevo aprendiz</h1>
 
-<p>Si usted no pertenece a este complejo,<br> por favor dirijase al link 'Otros' 
-<br> y seleccione en cargo 'Aprendiz'
+<p>Si usted no pertenece a este complejo,<br> por favor dirijase al link 'Visitantes' 
+  <br> e ingrese sus datos</p>
 <%= render 'form' %>
 
-<%= link_to 'Atras', aprendizs_path, :class => 'btn btn-mini' %>
+<% if current_user %>
+	<%= link_to 'Atras', aprendizs_path, :class => 'btn btn-mini btn-success' %>
+<% else %>
+	<%= link_to 'Atras', root_path, :class => 'btn btn-mini btn-info' %>
+<% end %>

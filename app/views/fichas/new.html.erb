@@ -1,5 +1,7 @@
+<h1><%= @centro.nombre %></h1>
 <h1>Nueva ficha</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Atras', fichas_path, :class => 'btn btn-mini' %>
+<%= link_to 'Volver a Fichas', fichas_path, :class => 'btn btn-mini btn-info' %> | 
+<%= link_to 'Volver a Centros', centros_path, :class => 'btn btn-mini btn-info' %>

@@ -49,3 +49,5 @@ group :development do
 end
 
 gem 'sorcery'
+gem "cancancan"
+gem "rolify"

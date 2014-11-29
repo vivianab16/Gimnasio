@@ -1,6 +1,6 @@
 class CargosController < ApplicationController
   before_action :set_cargo, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :require_login
   # GET /cargos
   # GET /cargos.json
   def index

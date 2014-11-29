@@ -25,5 +25,7 @@
   <%= @aprendiz.ficha.ficha %>
 </p>
 
-<%= link_to 'Editar', edit_aprendiz_path(@aprendiz), :class => 'btn btn-mini' %> |
-<%= link_to 'Atras', aprendizs_path, :class => 'btn btn-mini' %>
+<% if current_user %> 
+<%= link_to 'Editar', edit_aprendiz_path(@aprendiz), :class => 'btn btn-mini btn-success' %> |
+<% end %> 
+<%= link_to 'Atras', static_pages_home_path, :class => 'btn btn-mini btn-info' %>

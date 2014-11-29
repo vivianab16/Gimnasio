@@ -20,5 +20,7 @@
   <%= @otro.cargo.nombre rescue nil %>
 </p>
 
-<%= link_to 'Editar', edit_otro_path(@otro) %> |
-<%= link_to 'Atras', otros_path %>
+<% if current_user %> 
+<%= link_to 'Editar', edit_otro_path(@otro), :class => 'btn btn-mini btn-success' %> |
+<% end %> 
+<%= link_to 'Atras', static_pages_home_path, :class => 'btn btn-mini btn-info' %>

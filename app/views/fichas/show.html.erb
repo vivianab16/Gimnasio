@@ -10,5 +10,6 @@
   <%= @ficha.ficha %>
 </p>
 
-<%= link_to 'Editar', edit_ficha_path(@ficha), :class => 'btn btn-mini' %> |
-<%= link_to 'Atras', fichas_path, :class => 'btn btn-mini' %>
+<%= link_to 'Editar', edit_centro_ficha_path(@centro, @ficha), :class => 'btn btn-mini btn-success' %> |
+<%= link_to 'Volver a Fichas', fichas_path, :class => 'btn btn-mini btn-info' %> | 
+<%= link_to 'Volver a Centros', centros_path, :class => 'btn btn-mini btn-info' %>

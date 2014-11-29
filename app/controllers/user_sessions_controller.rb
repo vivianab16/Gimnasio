@@ -8,7 +8,10 @@ class UserSessionsController < ApplicationController
 
   def create
   	if @user=login(params[:email], params[:password])
-  		redirect_back_or_to(:users, notice:'Ingreso con exito!')
+
+      redirect_back_or_to(:static_pages_home, notice:'Ingreso con exito!')
+
+      
   	else
   		flash.now[:alert]='Usuario y/o Contraseña no coinciden'
   		render action:'new'

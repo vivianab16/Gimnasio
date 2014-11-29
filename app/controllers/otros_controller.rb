@@ -1,6 +1,6 @@
 class OtrosController < ApplicationController
   before_action :set_otro, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :require_login
   # GET /otros
   # GET /otros.json
   def index

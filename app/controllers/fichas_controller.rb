@@ -1,6 +1,6 @@
 class FichasController < ApplicationController
   before_action :set_ficha, only: [:show, :edit, :update, :destroy, :index, :new, :create]
-
+  skip_before_filter :require_login
   # GET /fichas
   # GET /fichas.json
   def index
@@ -60,6 +60,10 @@ class FichasController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def allFichas
+    @fichas = Ficha.all
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
